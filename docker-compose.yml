@@ -1,0 +1,11 @@
+version :'3.8'
+services :
+  web :
+    build: .
+    port:
+      - "8080:5000"
+    depends on:
+      - redis 
+    redis: 
+      image: "redis:alpine"
+  
